@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="html">
+    <title>Loading</title>
+    <style>
+      
+  * {
+
+margin: 0;    
+padding:0;
+box-sizing: border-box;
+
+  }
+ body {
+   
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   min-height: 100vh;
+   background: #102626;
+ }
+
+#container {
+  
+  display: flex;
+  width:100%;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  background: #102626;
+  
+  
+ -webkit-box-reflect: below 1px linear-gradient(#0001,#0004)
+ 
+
+}
+
+
+#container #loader {#fdd300
+  
+  position: relative;
+  width:200px;
+  height:200px;
+  border-radius:50%;
+  background: #102626;
+  
+  animation: loading 2s linear infinite;
+  
+}
+
+
+@keyframes loading {
+  
+  0% {
+    
+    transform:rotate(0deg);
+    
+  }
+  
+  100% 
+  {
+    
+   transform:rotate(360deg); 
+    
+  }
+  
+  
+  
+}
+
+    
+#container #loader::before
+{
+  
+content: '';
+position:absolute;
+
+width:50%;
+height:100%;
+background: linear-gradient(to top, transparent,#00ebff);
+
+  background-size: 100px 200px;
+  background-repeat: no-repeat; 
+  border-top-left-radius: 100px;
+  border-bottom-left-radius:100px;
+  
+  
+  
+}
+   
+#container #loader::after
+{
+  
+  content: '';
+  position:absolute ;
+  top:0;
+  left:50%;
+  transform: translateX(-50%);
+  width: 20px;
+  height:20px;
+    
+  background: #00fff9;
+  border-radius:50%;
+  z-index:10;
+  box-shadow: 0 0 10px #00fff9,
+              0 0 10px #00fff9,
+              0 0 10px #00fff9,
+              0 0 10px #00fff9,
+              0 0 10px #00fff9,
+              0 0 10px #00fff9,
+              0 0 10px #00fff9,
+              0 0 10px #00fff9,
+              0 0 10px #00fff9,
+              0 0 10px #00fff9;
+  
+}
+   
+ #container #loader span {
+   
+   
+   position: absolute;
+   
+   top: 15px;
+   left:20px;
+   right:20px;
+   bottom:20px; 
+   background: #102626;
+   border-radius:50%;
+   
+   width: 170px;
+   height: 170px;
+   
+ }
+   
+   
+   
+   
+   
+    </style>
+  </head>
+  <body>
+    
+    
+    
+  <div id="container"> 
+  
+ 
+  <div id="loader">
+    
+  <span> </span>  
+    
+  </div>
+  
+  
+  
+  
+  
+  
+  </div>  
+    
+
+
+
+
+
+    
+  </body>
+</html>
